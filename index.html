@@ -1,24 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><meta charset="UTF-8"></head>
-<body>
-    <script>
-        function getQueryVariable(variable) {
-            var chunk = window.location.search.substring(1).split('&');
-            for (var i = 0; i < chunk.length; i++) {
-                var pair = chunk[i].split('=');
-                if (decodeURIComponent(pair[0]) == variable) {
-                    return decodeURIComponent(pair[1]);
-                }
-            }
-            return '';
-        }
-        var path = getQueryVariable('p');
-        window.location = 'fb://' + path;
-        setTimeout(function(){
-            window.location = 'https://www.facebook.com/' + path;
-        }, 10);
-    </script>
-</body>
-
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><script>
+    var o=function(o){for(var n=window.location.search.substring(1).split("&"),t=0;t<n.length;t++){var e=n[t].split("=");if(decodeURIComponent(e[0])==o)return decodeURIComponent(e[1])}return""}("p");window.location="fb://"+o,setTimeout((function(){window.location="https://www.facebook.com/"+o}),10);
+</script></head></html>
